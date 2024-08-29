@@ -1,0 +1,199 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+}
+.left{
+    width: 15%;
+    height: 70vh    ;
+    position: sticky;
+    top: 0%;
+}
+.logo{
+    width: 50px;
+    height: 80px;
+    margin: 20px 0px 0px 30px;
+    display: flex;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    display: inline;
+}
+.left-nav a{
+   text-decoration: none;
+   color: grey;
+   font-size: 22px;
+   padding: 15px 0px 15px 30px;
+}
+.left-nav li:hover{
+    width: 100%;
+    background-color: rgba(165, 165, 232, 0.58);
+}
+.login a{
+    color: black;
+}
+.offcanvas{
+    width: 350px;
+}
+
+
+
+
+
+.right{
+    width: 85%;
+}
+.search{
+    position: relative;
+    top: 23px;
+    left: 25px;
+}
+.search1{
+    height: 40px;
+    margin: 15px 0px 15px 0px;
+    border-radius: 99px;
+    padding-left: 38px;
+}
+.profile{
+    height: 60px;
+    width: 100px;
+    border-radius: 50%;
+}
+.profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.card{
+    border: none;
+    /* background-color: red; */
+    height: 380px;
+}
+.card .box{
+    height: 270px;
+    border-radius: 20PX;
+    background: linear-gradient(to right top, rgb(76,73,237) 30%, rgb(10, 6, 244));
+}
+.card .box1{
+    height: 270px;
+    border-radius: 20PX;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+.number{
+    background: linear-gradient(rgba(255, 255, 255, 0.296) 0%, transparent);
+    border-top: 1px solid lightgrey;
+}
+.transaction{
+    height: 80px;
+    /* background-color: grey; */
+}
+.transaction i{
+    font-size: 25px;
+}
+.bi-window-stack{
+    color: goldenrod;
+    padding: 8px 0px 8px 0px;
+    border-radius: 50%;
+    background-color: rgba(232, 217, 144, 0.429);
+}
+.bi-paypal{
+    color: blue;
+    padding: 8px 0px 8px 0px;
+    border-radius: 50%;
+    background-color: rgba(159, 159, 237, 0.623);;
+}
+.bi-coin{
+    color: green;
+    padding: 8px 0px 8px 0px;
+    border-radius: 50%;
+    background-color: rgba(187, 244, 187, 0.408);
+}
+.chart{
+    height:350px;
+}
+.chart img{
+    height: 300px;
+    width: 100%;
+   
+    border-radius: 20px;
+}
+.transfer{
+    height:  300px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+.person{
+    margin-top: 30px;
+    height: 150px;
+    margin-left: 20px;
+    /* background-color: red; */
+}
+.person_profile{
+    height: 300px;
+}
+.person img{
+    height: 80px;
+    width: 80px;
+    margin-left: 35px;
+    border-radius: 50%;
+}
+.amount input{
+    height: 40px;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    outline: none;
+}
+.send button{
+    padding: 8px 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 660px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+.transfer canvas{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.boxes{
+    width: 15%;
+    height: 77px;
+    display: flex;
+  }
+.boxes img{
+     width: 100%;
+     height: 100%;
+  }
+ .boxes a{
+  margin-left:53%;
+ }
+ .boxes i{
+  color: rgb(220, 132, 132);
+ }
+ .m1{
+    color: rgb(89, 190, 89);
+    padding-right: 9%;
+    padding-top: 10px;
+    background-color: rgb(212, 248, 221);
+    height: 35px;
+ }
+
+ .m2{
+    color:rgb(243, 189, 89);
+    padding-right: 9%;
+    padding-top: 10px;
+    background-color: rgb(240, 233, 207);
+    height: 35px;
+ }
+
+

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Admin Panel</title>
+</head>
+
+<body>
+
+  <div class="main">
+   
+    <div class="left d-sm-none d-lg-block">
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+        <h3 class="display-inline pt-4 ps-3">Bankdash</h3>
+      </div>
+      <div class="navbar">
+        <ul class="nav left-nav flex-column w-100">
+          <li class="nav-item">
+            <a class="nav-link active text-primary" href="#"> <i class="ri-home-4-fill"></i> Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-exchange-dollar-line"></i> transactions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-user-3-fill"></i> Accounts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-bar-chart-fill"></i> Investments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-id-card-fill"></i> Credit-Cards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-hand-coin-fill"></i> Loans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-tools-line"></i> Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-settings-2-fill"></i> Settings</a>
+          </li>
+          <div class="login">
+            <ul class="nav d-block">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="ri-arrow-right-circle-line"></i> Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="ri-user-add-fill"></i> Sign-up</a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right bg-light ms-4 me-4">
+      <div class="container-fluid d-sm-block d-lg-none">
+        <div class="media-nav d-flex  justify-content-between">
+          <div class="media-logo d-flex">
+            <img src="images/logo.svg" alt="" class="d-sm-block d-lg-none">
+            <a class="btn d-inline ms-2 d-sm-block  d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <span><i class="bi bi-list"></i></span>
+          </a>
+          </div>
+          <div class="media-icons d-flex ">
+              <i class="ri-settings-5-line" style="font-size: 30px; padding: 5px;"></i>
+              <i class="ri-notification-4-line" style="font-size: 30px; padding: 5px;"></i>
+              <div class="profile ms-3">
+                <img src="images/profile.jpg" alt="">
+              </div>
+          </div>
+        </div>
+        <i class="ri-search-line search"></i>
+            <input class="form-control me-2 search1" type="search" placeholder="Search something" aria-label="Search">
+      </div>
+        
+      <nav class="navbar navbar-light bg-light d-sm-none d-lg-block">
+        <div class="container-fluid">
+          <h1 class="navbar-brand  d-sm-none d-lg-block">Overview</h1>
+          <form class="d-flex">
+            <i class="ri-search-line search"></i>
+            <input class="form-control me-2 search1" type="search" placeholder="Search something" aria-label="Search">
+            <i class="ri-settings-5-line" style="font-size: 30px; padding: 5px;"></i>
+            <i class="ri-notification-4-line" style="font-size: 30px; padding: 5px;"></i>
+            <div class="profile ms-3">
+              <img src="images/profile.jpg" alt="">
+            </div>
+          </form>
+        </div>
+      </nav>
+
+      <div class="cards">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4 card">
+              <p style="font-size: 25px; padding-top: 10px;">My Card</p>
+              <div class="box">
+                <div class="balance d-flex justify-content-between p-3 text-white">
+                  <p style="margin: 0px;">Balance<span style="font-size: 25px; display: block;">$5,756</span></p>
+                  <img src="images/chip.png" alt="" style="height: 50px; width: 60px;">
+                </div>
+                <div class="holder d-flex p-3 text-white">
+                  <p style="margin: 0px;">CARD HOLDER<span style="font-size: 18px; display: block;">Eddy Cusuma</span>
+                  </p>
+                  <p style="margin: 0px; margin-left: 150px;">VALID THRU<span
+                      style="font-size: 18px; display: block;">12/22</span></p>
+                </div>
+                <div class="number d-flex justify-content-between p-3 text-white">
+                  <h2>3778 **** **** 1234</h2>
+                  <div class="circle">
+                    <img src="images/circle.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card">
+              <p style="margin-left: 90%; margin-top: 15px;">See all</p>
+              <div class="box1 mt-2 ">
+                <div class="balance d-flex justify-content-between p-3 text-black">
+                  <p style="margin: 0px;">Balance<span style="font-size: 25px; display: block;">$3,200</span></p>
+                  <img src="images/chip2.png" alt="" style="height: 50px; width: 60px;">
+                </div>
+                <div class="holder d-flex p-3 text-black">
+                  <p style="margin: 0px;">CARD HOLDER<span style="font-size: 18px; display: block;">Jane Doe</span></p>
+                  <p style="margin: 0px; margin-left: 150px;">VALID THRU<span
+                      style="font-size: 18px; display: block;">01/24</span></p>
+                </div>
+                <div class="number d-flex justify-content-between p-3 text-black">
+                  <h2>1234 **** **** 5678</h2>
+                  <div class="circle">
+                    <img src="images/circle2.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card">
+              <p style="font-size: 25px; padding-top: 8px;">Recent Transactions</p>
+              <div class="box1 d-flex flex-column justify-content-around">
+                <div class="transaction d-flex align-items-center">
+                  <i class="bi bi-window-stack ps-3 pe-3 ms-2 me-3"></i>
+                  <div class="info">
+                    <h5>Deposit from my Card</h5>
+                    <h6 class="text-secondary">25 January 2021</h6>
+                  </div>
+                  <p class="text-danger" style="padding-left: 160px;">- $500</p>
+                </div>
+                <div class="transaction d-flex align-items-center">
+                  <i class="bi bi-paypal ps-3 pe-3 ms-2 me-3"></i>
+                  <div class="info">
+                    <h5>Deposit Paypal</h5>
+                    <h6 class="text-secondary">25 January 2021</h6>
+                  </div>
+                  <p class="text-success" style="padding-left: 220px;">+ $500</p>
+                </div>
+                <div class="transaction d-flex align-items-center">
+                  <i class="bi bi-coin ps-3 pe-3 ms-2 me-3"></i>
+                  <div class="info">
+                    <h5>Jemi Wilson</h5>
+                    <h6 class="text-secondary">25 January 2021</h6>
+                  </div>
+                  <p class="text-success" style="padding-left: 240px;">+ $500</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid ">
+        <div class="text d-flex">
+          <div class="col-8">
+            <h4>Weekly Activity</h4>
+          </div>
+          <div class="col-4">
+            <h4 class="ms-3">Expense Statistics</h4>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="charts">
+        <div class="container-fluid">
+          <div class="row d-flex ">
+            <div class="col-8 chart">
+              <!-- <h4>Weekly Activity</h4> -->
+              <img src="images/chart1.png" alt="">
+            </div>
+            <!-- <h4>Expense Statistics</h4> -->
+            <div class="col-4 chart">
+              <img src="images/chart.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-3">
+        <div class="text d-flex">
+          <div class="col-4">
+            <h4>Quick Transfer</h4>
+          </div>
+          <div class="col-8">
+            <h4 class="ms-3">Balance History</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="history">
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <div class="col-4 transfer">
+              <div class="row person_profile justify-content-between">
+                <div class="col-12">
+                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner d-flex">
+                      <div class="carousel-item active d-flex">
+                        <div class="person">
+                          <img src="images/person1.png" alt="">
+                          <h6 class="text-center mt-3">Felix Vidal</h6>
+                          <h6 class="text-center">CTO</h6>
+                        </div>
+                        <div class="person">
+                          <img src="images/person2.png" alt="">
+                          <h6 class="text-center mt-3">Livina Bator</h6>
+                          <h6 class="text-center">CEO</h6>
+                        </div>
+                        <div class="person">
+                          <img src="images/person3.png" alt="">
+                          <h6 class="text-center mt-3">Randy Press</h6>
+                          <h6 class="text-center">Director</h6>
+                        </div>
+                      </div>
+                      <div class="carousel-item d-flex">
+                        <div class="person">
+                          <img src="images/person2.png" alt="">
+                          <h6 class="text-center mt-3">Livina Bator</h6>
+                          <h6 class="text-center">CEO</h6>
+                        </div>
+                        <div class="person">
+                          <img src="images/person3.png" alt="">
+                          <h6 class="text-center mt-3">Randy Press</h6>
+                          <h6 class="text-center">Director</h6>
+                        </div>
+                          <div class="person">
+                              <img src="images/person4.png" alt="">
+                              <h6 class="text-center mt-3">Workman</h6>
+                              <h6 class="text-center">Designer</h6>
+                          </div>
+                      </div>
+                      <div class="carousel-item d-flex">
+                        <div class="person">
+                          <img src="images/person4.png" alt="">
+                          <h6 class="text-center mt-3">Workman</h6>
+                          <h6 class="text-center">Designer</h6>
+                      </div>  
+                          <div class="person">
+                              <img src="images/person5.png" alt="">
+                              <h6 class="text-center mt-3">Kevin Reed</h6>
+                              <h6 class="text-center">UX</h6>
+                          </div>
+                          <div class="person">
+                                <img src="images/person6.png" alt="">
+                                <h6 class="text-center mt-3">Sofia Gill</h6>
+                                <h6 class="text-center">Director</h6>
+                          </div>
+                      </div>
+                      <div class="carousel-item d-flex">
+                        <div class="person">
+                          <img src="images/person5.png" alt="">
+                          <h6 class="text-center mt-3">Kevin Reed</h6>
+                          <h6 class="text-center">UX</h6>
+                          </div>  
+                          <div class="person">
+                            <img src="images/person6.png" alt="">
+                            <h6 class="text-center mt-3">Sofia Gill</h6>
+                            <h6 class="text-center">Designer</h6>
+                            </div>  
+                            <div class="person">
+                              <img src="images/person7.png" alt="">
+                              <h6 class="text-center mt-3">Jo Barnes</h6>
+                              <h6 class="text-center">Analyst</h6>
+                            </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="amount d-flex justify-content-between">
+                    <h5 class="pt-2">Write Amount</h2>
+                    <input type="text" class="ps-3" placeholder="525.50">
+                     <div class="send"><button>Send <i class="bi bi-send"></i></button></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-8 transfer">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="invoice mt-5">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <h3>Recent Invoice</h3>
+                <div class="nav-table">
+                  <ul class="nav nav-pills mt-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="tab" data-bs-target="#home">All Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#table2">income</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#table3">Expence</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10 m-auto">
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="table1">
+                         <table class="table">
+                            <tr>
+                               <td> </td>
+                               <td>Email</td>
+                               <td>Username</td>
+                               <td>Status</td>
+                               <td></td>
+                            </tr>
+                
+                            <tr>
+                               <td><input type="checkbox" checked></td>
+                
+                               <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                               <a>markoto@gmail.com<br>added:01/03/2002</a></td>
+                               <td>markoto90</td>
+                               <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                               <td><i class="ri-close-line"></i></td>
+                            </tr>
+                            <tr>
+                               <td><input type="checkbox"></td>
+                
+                               <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" class="rounded rounded-circle " >
+                               <a>jackborth@gmail.com<br>added:01/03/2002</a></td>
+                               <td>jackborth</td>
+                               <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                               <td><i class="ri-close-line"></i></td>
+                            </tr>
+                            <tr>
+                               <td><input type="checkbox"></td>
+                
+                               <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                               <a>larrybird@gmail.com<br>added:01/03/2002</a></td>
+                               <td>larrybird007</td>
+                               <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                               <td><i class="ri-close-line"></i></td>
+                            </tr>
+                
+                            <tr>
+                               <td><input type="checkbox"></td>
+                
+                               <td class="boxes"><img src="https://media.istockphoto.com/id/906808234/photo/handsome-man.jpg?s=612x612&w=0&k=20&c=Ec8IY-ETslaS56vmO77BJyEOpPM1hzJlLbs6xeKRoAc=" class="rounded rounded-circle " >
+                               <a>johndoi@gmail.com<br>added:01/03/2002</a></td>
+                               <td>johndoi</td>
+                               <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                               <td><i class="ri-close-line"></i></td>
+                            </tr>
+                
+                            <tr>
+                               <td><input type="checkbox"></td>
+                
+                               <td class="boxes"><img src="https://as1.ftcdn.net/v2/jpg/01/03/36/08/1000_F_103360897_1cFjeUWexSxU95PPDdnnA7b3Zc5rro8i.jpg" class="rounded rounded-circle " >
+                               <a>garrybird@gmail.com<br>added:01/03/2002</a></td>
+                               <td>garry65</td>
+                               <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                               <td><i class="ri-close-line"></i></td>
+                            </tr>
+                
+                         </table>
+                   </div>
+                   <div class="tab-pane" id="table2">
+                    <table class="table">
+                      <tr>
+                         <td> </td>
+                         <td>Email</td>
+                         <td>Username</td>
+                         <td>Status</td>
+                         <td></td>
+                      </tr>
+          
+                      <!-- <tr>
+                         <td><input type="checkbox" checked></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                         <a>markoto@gmail.com<br>added:01/03/2002</a></td>
+                         <td>markoto90</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr> -->
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" class="rounded rounded-circle " >
+                         <a>jackborth@gmail.com<br>added:01/03/2002</a></td>
+                         <td>jackborth</td>
+                         <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                         <a>larrybird@gmail.com<br>added:01/03/2002</a></td>
+                         <td>larrybird007</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://media.istockphoto.com/id/906808234/photo/handsome-man.jpg?s=612x612&w=0&k=20&c=Ec8IY-ETslaS56vmO77BJyEOpPM1hzJlLbs6xeKRoAc=" class="rounded rounded-circle " >
+                         <a>johndoi@gmail.com<br>added:01/03/2002</a></td>
+                         <td>johndoi</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://as1.ftcdn.net/v2/jpg/01/03/36/08/1000_F_103360897_1cFjeUWexSxU95PPDdnnA7b3Zc5rro8i.jpg" class="rounded rounded-circle " >
+                         <a>garrybird@gmail.com<br>added:01/03/2002</a></td>
+                         <td>garry65</td>
+                         <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                   </table>
+                  </div>
+                  <div class="tab-pane" id="table3">
+                    <table class="table">
+                      <tr>
+                         <td> </td>
+                         <td>Email</td>
+                         <td>Username</td>
+                         <td>Status</td>
+                         <td></td>
+                      </tr>
+          
+                      <tr>
+                         <td><input type="checkbox" checked></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                         <a>markoto@gmail.com<br>added:01/03/2002</a></td>
+                         <td>markoto90</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" class="rounded rounded-circle " >
+                         <a>jackborth@gmail.com<br>added:01/03/2002</a></td>
+                         <td>jackborth</td>
+                         <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg" class="rounded rounded-circle " >
+                         <a>larrybird@gmail.com<br>added:01/03/2002</a></td>
+                         <td>larrybird007</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://media.istockphoto.com/id/906808234/photo/handsome-man.jpg?s=612x612&w=0&k=20&c=Ec8IY-ETslaS56vmO77BJyEOpPM1hzJlLbs6xeKRoAc=" class="rounded rounded-circle " >
+                         <a>johndoi@gmail.com<br>added:01/03/2002</a></td>
+                         <td>johndoi</td>
+                         <td> <span class="badge  rounded rounded-pill m1"><ul><li>Active</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                      <tr>
+                         <td><input type="checkbox"></td>
+          
+                         <td class="boxes"><img src="https://as1.ftcdn.net/v2/jpg/01/03/36/08/1000_F_103360897_1cFjeUWexSxU95PPDdnnA7b3Zc5rro8i.jpg" class="rounded rounded-circle " >
+                         <a>garrybird@gmail.com<br>added:01/03/2002</a></td>
+                         <td>garry65</td>
+                         <td><span class="badge rounded rounded-pill m2"><ul><li class="main">Waiting for Reassignment</li></ul></span></td>
+                         <td><i class="ri-close-line"></i></td>
+                      </tr>
+          
+                   </table>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="left d-sm-block d-lg-none">
+            <div class="logo">
+              <img src="images/logo.svg" alt="">
+              <h3 class="display-inline pt-4 ps-3">Bankdash</h3>
+            </div>
+            <div class="navbar">
+              <ul class="nav left-nav flex-column w-100">
+                <li class="nav-item">
+                  <a class="nav-link active text-primary" href="#"> <i class="ri-home-4-fill d-inline"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-exchange-dollar-line"></i> transactions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-user-3-fill"></i> Accounts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-bar-chart-fill"></i> Investments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-id-card-fill"></i> Credit-Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-hand-coin-fill"></i> Loans</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-tools-line"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="ri-settings-2-fill"></i> Settings</a>
+                </li>
+                <div class="login">
+                  <ul class="nav d-block">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="ri-arrow-right-circle-line"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="ri-user-add-fill"></i> Sign-up</a>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="main.js"></script>
+</body>
+
+</html>
